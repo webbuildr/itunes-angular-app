@@ -1,0 +1,13 @@
+<form name="search_form" ng-submit="searchData.search()">
+	<div class="input-group">
+		<span class="input-group-btn"><button class="btn btn-primary" type="button" ng-click="searchData.search()">Search now</button></span>
+		<input type="text" ng-model="searchData.searchTerm" placeholder="Type search terms here..." class="form-control">
+	</div>
+</form>
+
+<div class="spinner-container" ng-show="searchData.formSubmitted"><img src="img/spinner.gif" alt="Downloading..."></div>
+
+<ul class="list-group results-list">
+	<li it-search-results ng-repeat="result in searchData.searchResults" class="list-group-item results-list-item">
+	</li>
+</ul>

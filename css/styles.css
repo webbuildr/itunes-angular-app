@@ -1,0 +1,18 @@
+.results-list {
+	margin-top: 1em;
+}
+
+.results-list-item h2 {
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+.results-list-item .item-details {
+	margin-left: 130px;
+}
+
+.spinner-container {
+	width: 128px;
+	margin: 2em auto 0;
+}

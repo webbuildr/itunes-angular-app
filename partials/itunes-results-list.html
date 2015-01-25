@@ -1,0 +1,16 @@
+<img ng-src="{{ result.artworkUrl100 }}" class="pull-left">
+<div class="item-details">
+	<h2>Track: {{ result.trackName }}</h2>
+	Artist: {{ result.artistName }}<br>
+	Type: {{ result.kind }}<br>
+	Collection: {{ result.collectionCensoredName }}<br>
+	Genre: {{ result.primaryGenreName }}<br>						
+	<span ng-if="result.kind == 'song'">
+		<audio ng-src="{{ result.previewUrl }}" controls preload="none">
+			<p>Your browser doesn't support the audio element but you can <a href="{{ result.previewUrl }}">download the audio clip</a></p>
+		</audio>
+	</span><br>
+	Track Price: {{ result.trackPrice | currency }}<br>
+	Collection Price: {{ result.collectionPrice | currency }}<br>
+	<span ng-show="result.shortDescription">Description: {{ result.shortDescription }}</span>
+</div>

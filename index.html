@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="iTunesSearch">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iTunes Search</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<header class="page-header">
+				<h1>iTunes Search</h1>
+				<ul class="nav nav-pills" ng-controller="NavController">
+					{{ appData.location }}
+				  <li ng-class="{active:appData.checkLocation('/search')}"><a href="#/search">Home</a></li>
+				  <li ng-class="{active:appData.checkLocation('/about')}"><a href="#/about">About</a></li>
+				</ul>	
+			</header>
+
+			<div ng-view></div>
+		</div> <!-- /.container -->
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
